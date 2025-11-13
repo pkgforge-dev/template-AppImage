@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Preparing Container
-        run: . ./pre-setup.sh
+        run: ./pre-setup.sh
       - name: Install Dependencies
         run: ./get-dependencies.sh
       - name: Make AppImage
