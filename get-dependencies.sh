@@ -2,6 +2,8 @@
 
 set -eu
 
+ARCH=$(uname -m)
+
 echo "Installing basic dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
@@ -29,3 +31,4 @@ get-debloated-pkgs --add-common --prefer-nano
 # Finally we get the version of the application and put it in a version file
 # If the app was installed with pacman it is as simple as the following:
 # pacman -Q PACKAGENAME | awk '{print $2; exit}' > ./dist/version
+

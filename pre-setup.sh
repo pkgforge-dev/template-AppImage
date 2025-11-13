@@ -2,13 +2,6 @@
 
 set -e
 
-export ARCH=$(uname -m)
-
-# CHAGE ME FOR THE NAME OF THE APPLICATION
-# Use the application name, not the package name
-# this will be used in the title of the AppImage and release
-export APPNAME=REPLACE_ME
-
 QUICK_SHARUN=${QUICK_SHARUN:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/quick-sharun.sh}
 DEBLOATED_PACKAGES=${DEBLOATED_PACKAGES:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh}
 MAKE_AUR_PACKAGE=${MAKE_AUR_PACKAGE:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/make-aur-package.sh}
@@ -49,6 +42,5 @@ chmod +x ./get-dependencies.sh
 chmod +x ./make-appimage.sh
 
 mkdir -p ./dist
-echo "$APPNAME" > ./dist/appname
 
 echo "CONTAINER IS READY!"
